@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Tabki",
+  "version": "0.1",
+  "description": "Show the next Anki card on your new tab page.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "danilo.verde@live.com"
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "src/newtab/newtab.html"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "scripts": ["dist/background/background.js"]
+  },
+  "permissions": ["storage", "*://localhost/*"],
+  "browser_action": {
+    "default_icon": "icons/icon-32.png",
+    "default_title": "Tabki Settings"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}

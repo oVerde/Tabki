@@ -1,0 +1,13 @@
+{
+  "name": "tabki",
+  "packageManager": "yarn@4.5.3",
+  "scripts": {
+    "build": "tsc && esbuild src/newtab/newtab.ts --bundle --minify --outdir=dist/newtab && esbuild src/options/options.ts --bundle --minify --outdir=dist/options && esbuild src/welcome/welcome.ts --bundle --minify --outdir=dist/welcome && esbuild src/background/background.ts --bundle --minify --outdir=dist/background",
+    "pnpify": "yarn dlx @yarnpkg/pnpify --sdk"
+  },
+  "devDependencies": {
+    "@types/firefox-webext-browser": "^120.0.4",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.2"
+  }
+}
